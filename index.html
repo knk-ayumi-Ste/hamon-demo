@@ -19,32 +19,6 @@
         <div id="area5"></div>
     </div>
 
-    <!-- 効果音 -->
-    <audio src="./sound/sound_1.mp3" id="sound1"></audio>
-    <audio src="./sound/sound_2.mp3" id="sound2"></audio>
-    <audio src="./sound/sound_3.mp3" id="sound3"></audio>
-    <audio src="./sound/sound_4.mp3" id="sound4"></audio>
-    <audio src="./sound/sound_5.mp3" id="sound5"></audio>
-<script type="text/javascript">
-    window.onload = function(){
-        document.getElementById("area1").onclick = function(){
-            sound1.play();
-        }
-        document.getElementById("area2").onclick = function(){
-            sound2.play();
-        }
-        document.getElementById("area3").onclick = function(){
-            sound3.play();
-        }
-        document.getElementById("area4").onclick = function(){
-            sound4.play();
-        }
-        document.getElementById("area5").onclick = function(){
-            sound5.play();
-        }
-    }
-</script>
-
     <!-- 波紋 -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.ripples-min.js"></script>
@@ -57,6 +31,33 @@
             });
         })
     </script>
+
+    <!-- 効果音 -->
+    <audio src="./sound/sound_1.mp3" id="sound1"></audio>
+    <audio src="./sound/sound_2.mp3" id="sound2"></audio>
+    <audio src="./sound/sound_3.mp3" id="sound3"></audio>
+    <audio src="./sound/sound_4.mp3" id="sound4"></audio>
+    <audio src="./sound/sound_5.mp3" id="sound5"></audio>
+    <script type="text/javascript">
+        window.onload = function () {
+            $("#area1").on('click',function () {
+                sound1.play();
+            });
+            $("#area2").on('click',function () {
+                sound2.play();
+            });
+            $("#area3").on('click',function () {
+                sound3.play();
+            });
+            $("#area4").on('click',function () {
+                sound4.play();
+            });
+            $("#area5").on('click',function () {
+                sound5.play();
+            });
+        }
+    </script>
+
 </body>
 
 </html>
