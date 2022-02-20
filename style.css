@@ -8,23 +8,7 @@ body{
     height: 100vh;
     display: flex;
 }
-#area1{
-    width: 20%;
-    height: 100vh;
-}
-#area2{
-    width: 20%;
-    height: 100vh;
-}
-#area3{
-    width: 20%;
-    height: 100vh;
-}
-#area4{
-    width: 20%;
-    height: 100vh;
-}
-#area5{
+#area1,#area2,#area3,#area4,#area5{
     width: 20%;
     height: 100vh;
 }
