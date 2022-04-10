@@ -12,11 +12,6 @@
 
 <body>
     <div id="area">
-        <div id="area1"></div>
-        <div id="area2"></div>
-        <div id="area3"></div>
-        <div id="area4"></div>
-        <div id="area5"></div>
     </div>
 
     <!-- 波紋 -->
@@ -33,27 +28,21 @@
     </script>
 
     <!-- 効果音 -->
-    <audio src="./sound/sound_1.mp3" id="sound1"></audio>
-    <audio src="./sound/sound_2.mp3" id="sound2"></audio>
-    <audio src="./sound/sound_3.mp3" id="sound3"></audio>
-    <audio src="./sound/sound_4.mp3" id="sound4"></audio>
-    <audio src="./sound/sound_5.mp3" id="sound5"></audio>
-    <script type="text/javascript">
-        window.onload = function () {
-            $("#area1").on('click', function () {
-                sound1.play();
-            });
-            $("#area2").on('click', function () {
-                sound2.play();
-            });
-            $("#area3").on('click', function () {
-                sound3.play();
-            });
-            $("#area4").on('click', function () {
-                sound4.play();
-            });
-            $("#area5").on('click', function () {
-                sound5.play();
+    <audio src="" id="sound"></audio>
+    <script>
+        var audioList = [
+            "./sound/sound_1.mp3",
+            "./sound/sound_2.mp3",
+            "./sound/sound_3.mp3",
+            "./sound/sound_4.mp3",
+            "./sound/sound_5.mp3",
+        ];
+        window.onload = function() {
+            $("#area").on('click', function() {
+                var sound_random = Math.floor(Math.random() * audioList.length);
+                var sound = document.getElementById("sound");
+                sound.setAttribute("src", audioList[sound_random]);
+                sound.play();
             });
         }
     </script>
